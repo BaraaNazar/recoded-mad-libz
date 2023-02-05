@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Mad Libs project</title>
   </head>
-  <body>
-    <div class='madLibsEdit'>
+  <body class="bg-gray-600 text-white text-2xl">
+    <!-- container contains the navbar and the logo -->
+  <div class="flex flex-row justify-between">
+      <!-- logo -->
+      <img class="w-20 rounded-3xl" src="https://adapttogether.com/wp-content/uploads/2020/07/Mad_Libs_logo.png" alt="Mad_Libs_logo">
+
+      <!-- navbar -->
+    <ul class="flex m-1 text-amber-400">
+      <li class="p-5"><a href="#">Home</a></li>
+      <li class="p-5"><a href="https://en.wikipedia.org/wiki/Mad_Libs" target="_blank">Story</a></li>
+      <li class="p-5"><a href="https://www.madlibs.com/" target="_blank">More Games</a></li>
+    </ul>
+  </div>
+    <!--The main container that contains all the content-->
+  <div class="main-container flex">
+        <!--this is a container to inculde the two parts-->
+    <div class="flex flex-col justify-center items-center flex-wrap">
+      <h1 class="flex justify-center uppercase text-amber-400">Editing</h1>
+          <!-- this is the Edit part -->
+      <div class="mad-libs-edit w-screen flex flex-wrap">
+        <p id="paragraph" class="m-5"></p>
+      </div>
+      <h1 class="flex justify-center uppercase text-amber-400">Preview</h1>
+
+      <!-- this is the preview part -->
+      <div class="mad-libs-preview flex m-10 ">
+        <p id="paragraph2"></p>
+      </div>
+      <button id="btnInsert" type="button" >Save</button>
     </div>
-    <div class='madLibsPreview'>
+    <div id="isOutput">
+
     </div>
+  </div>
     <script src="do-not-touch.js"></script>
     <script src="madlibs.js"></script>
   </body>
